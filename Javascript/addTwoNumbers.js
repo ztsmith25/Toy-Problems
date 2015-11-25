@@ -17,21 +17,20 @@ var addTwoNumbers = function(l1, l2) {
       next = next.next;
     }
     return numString;
-  };
+  };//time complexity is O(N)
 
   //reverses a number(as a string)
 
   var revNum = function(numString) {
     var numArray = numString.split(''),
-      placeHolder = null,
-      newString = '';
+      placeHolder = null;
     for (var i = 0; i <= Math.floor((numArray.length - 1) / 2); i++) {
       placeHolder = numArray[numArray.length - 1 - i];
       numArray[numArray.length - 1 - i] = numArray[i];
       numArray[i] = placeHolder;
     }
     return parseInt(numArray.join(''), 10);
-  };
+  };//time complexity is O(N)
 
   //takes a number and converts it to a linked list
 
@@ -45,8 +44,8 @@ var addTwoNumbers = function(l1, l2) {
       tail = tail.next;
     }
     return list;
-  }
+  };//time complexity is O(N)
 
   var sum = revNum(listToNum(l1)) + revNum(listToNum(l2));
   return numToList(sum);
-};
+};//overall time complexith is linear
